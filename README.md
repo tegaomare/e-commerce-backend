@@ -1,5 +1,6 @@
 ## E-Commerce Back End
 
+<img src="./images/insomnia.png" href="image of what the server looks like in insomnia">
 This repository contains the back-end code for an E-Commerce application. It provides a robust and scalable API to manage various aspects of an online store, including products, categories, and tags. The back end is built using Node.js, Express.js, Sequelize ORM, and MySQL database.
 
 ## Installation
