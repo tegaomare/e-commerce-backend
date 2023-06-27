@@ -8,17 +8,8 @@ router.get("/", (req, res) => {
   // find all products
   // be sure to include its associated Category and Tag data
   Product.findAll({
-    include: [
-      {
-        model: Category,
-        attributes: ["category_name"],
-      },
-      {
-        model: Tag,
-        attributes: ["tag_name"],
-      },
-    ],
     attributes: ["id", "product_name", "price", "stock"],
+    include: [{ model: Category }],
   })
     .then((dbProductData) => res.json(dbProductData))
     .catch((err) => {
@@ -36,16 +27,7 @@ router.get("/:id", (req, res) => {
       id: req.params.id,
     },
     attributes: ["id", "product_name", "price", "stock"],
-    include: [
-      {
-        model: Category,
-        attributes: ["category_name"],
-      },
-      {
-        model: Tag,
-        attributes: ["tag_name"],
-      },
-    ],
+    include: [{ model: Category }, { model: Tag }],
   })
     .then((dbProductData) => {
       if (!dbProductData) {
@@ -62,14 +44,6 @@ router.get("/:id", (req, res) => {
 
 // create new product
 router.post("/", (req, res) => {
-  /* req.body should look like this...
-    {
-      product_name: "Basketball",
-      price: 200.00,
-      stock: 3,
-      tagIds: [1, 2, 3, 4]
-    }
-  */
   Product.create({
     product_name: req.body.product_name,
     price: req.body.price,
