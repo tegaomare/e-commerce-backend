@@ -37,6 +37,8 @@ To run the E-Commerce back end on your local machine, follow these steps:
 
 The E-Commerce back end provides several API routes for managing products, categories, and tags. You can use tools like Postman or Insomnia to interact with the API.
 
+## walkthrough video
+
 ## API Routes
 
 GET /api/categories: Retrieves all categories from the database.
