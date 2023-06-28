@@ -39,6 +39,8 @@ The E-Commerce back end provides several API routes for managing products, categ
 
 ## walkthrough video
 
+https://drive.google.com/file/d/15hMmvZBCA3n3M8QI9dIAe-zaK0j2hB6o/view
+
 ## API Routes
 
 GET /api/categories: Retrieves all categories from the database.
